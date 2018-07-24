@@ -1,15 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <!-- <div id="nav">
+      <router-link to="/home">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <router-link to="/mine">Mine</router-link>
+    </div> -->
+    <router-view></router-view>
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+export default class App extends Vue {
+    public name: string = 'MK-App';
+  }
+</script>
+
 <style lang="scss">
 #app {
+  height: 100%;
+  width: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
