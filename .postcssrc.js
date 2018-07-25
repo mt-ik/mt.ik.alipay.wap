@@ -1,9 +1,9 @@
 module.exports = {
   plugins: {
-    autoprefixer: {},
+    // autoprefixer: {},
     "postcss-pxtorem": {
       rootValue: 32,
-      propWhiteList: []
+      propWhiteList: ['*']
     },
   }
 }
