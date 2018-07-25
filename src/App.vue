@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <router-link to="/mine">Mine</router-link>
-    </div> -->
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+@Component
 export default class App extends Vue {
-    public name: string = 'MK-App';
-  }
+  public name: string = 'MK-App';
+}
 </script>
 
 <style lang="scss">
