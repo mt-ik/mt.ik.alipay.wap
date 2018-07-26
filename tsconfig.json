@@ -19,15 +19,15 @@
       "@/*": [
         "src/*"
       ],
-      "ramda": [
-        "location-of-types/npm-ramda-package/index"
-      ],
-      "qs": [
-        "location-of-types/npm-qs-package/index"
-      ],
-      "extend": [
-        "location-of-types/npm-extend-package/index"
-      ]
+      // "ramda": [
+      //   "location-of-types/npm-ramda-package/index"
+      // ],
+      // "qs": [
+      //   "location-of-types/npm-qs-package/index"
+      // ],
+      // "extend": [
+      //   "location-of-types/npm-extend-package/index"
+      // ]
     },
     "lib": [
       "es2015",

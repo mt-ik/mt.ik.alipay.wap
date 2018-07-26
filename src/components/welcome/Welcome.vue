@@ -18,8 +18,8 @@ import * as R from 'ramda';
 })
 export default class Welcome extends Vue {
     private msg: string = 'Hello Mt-Ik';
-    // private created() {
-    //     const options = qs.parse(window.location.href.split('?'));
-    // }
+    private created() {
+        // const options = qs.parse(window.location.href.split('?')[1]);
+    }
 }
 </script>
