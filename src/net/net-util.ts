@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param useInterceptors 全局拦截器
  * @return {AxiosInstance}
  */
-export function generateNet(config: object, useInterceptors: any): object {
+export function generateNet(config: object, useInterceptors: (params: any) => void): object {
     const netApi = axios.create(config);
     useInterceptors(netApi);
     return netApi;

@@ -20,7 +20,7 @@ import Alipay from '../alipay/Alipay.vue';
 })
 export default class Index extends Vue {
     private msg: string = 'Hello world';
-    private flag: boolean = true;
+    private flag: boolean = false;
 
     private changeFlag(flag: boolean): boolean {
         return !flag;
@@ -35,10 +35,18 @@ export default class Index extends Vue {
 </script>
 
 <style lang="postcss" scoped>
+    @svg square {
+        @rect {
+            fill: black;
+            width: 100%;
+            height: 100%;
+        }
+    }
     .mk-index {
-        height: 100%;
-        width: 100%;
-        background-color: #42b983;
+        height: var(--mk-height);
+        width: var(--mk-width);
+        background: svg(square);
+        background-color: #ffffff;
     }
 </style>
 

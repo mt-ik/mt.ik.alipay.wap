@@ -7,9 +7,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TimeTip from '@/components/welcome/TimeTip.vue';
-import qs from 'qs';
-import extend from 'extend';
-import * as R from 'ramda';
 
 @Component({
     components: {
@@ -18,8 +15,6 @@ import * as R from 'ramda';
 })
 export default class Welcome extends Vue {
     private msg: string = 'Hello Mt-Ik';
-    private created() {
-        // const options = qs.parse(window.location.href.split('?')[1]);
-    }
+    // private created() {}
 }
 </script>

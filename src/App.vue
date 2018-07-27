@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition>
-      <router-view></router-view>
+        <router-view></router-view>
     </transition>
   </div>
 </template>
@@ -15,14 +15,9 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="postcss" scoped>
 #app {
-  height: 100%;
-  width: 100%;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: var(--mk-height);
+  width: var(--mk-width);
 }
 </style>

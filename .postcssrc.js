@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     autoprefixer: {},
+    cssnano: {},
     "postcss-preset-env": {
       stage: 0,
     },
@@ -8,5 +9,6 @@ module.exports = {
       rootValue: 32,
       propWhiteList: ['*']
     },
+    "postcss-write-svg": {},
   }
 }
