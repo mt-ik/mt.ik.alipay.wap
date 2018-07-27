@@ -4,8 +4,11 @@ import Other from './views/other/other.vue';
 import Index from './views/index/Index.vue';
 import Advertising from './views/advertising/Advertising.vue';
 import Home from './views/home/Home.vue';
-import About from './views/about/About.vue';
+import Wealth from './views/wealth/Wealth.vue';
+import Reputation from './views//reputation/Reputation.vue';
+import Friend from './views/friend/Friend.vue';
 import Mine from './views/mine/Mine.vue';
+import About from './views/about/About.vue';
 
 Vue.use(Router);
 
@@ -16,26 +19,43 @@ const router = new Router({
       path: '/',
       name: 'index',
       component: Index,
-    },
-    {
-      path: '/ad',
-      name: 'ad',
-      component: Advertising,
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
-    {
-      path: '/mine',
-      name: 'mine',
-      component: Mine,
+      children: [
+        {
+          path: '/home',
+          name: 'home',
+          component: Home,
+        },
+        {
+          path: '/wealth',
+          name: 'wealth',
+          component: Wealth,
+        },
+        {
+          path: '/reputation',
+          name: 'reputation',
+          component: Reputation,
+        },
+        {
+          path: '/friend',
+          name: 'friend',
+          component: Friend,
+        },
+        {
+          path: '/mine',
+          name: 'mine',
+          component: Mine,
+        },
+        {
+          path: '/ad',
+          name: 'ad',
+          component: Advertising,
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About,
+        },
+      ],
     },
     {
       path: '*',

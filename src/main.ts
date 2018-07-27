@@ -1,5 +1,10 @@
 import Vue from 'vue';
 
+// import 'vue-awesome/icons/flag';
+// import 'vue-awesome/icons';
+// import Icon from 'vue-awesome';
+// Vue.component('icon', Icon);
+
 import 'normalize.css';
 import '@/styles/style.css';
 
