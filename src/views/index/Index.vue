@@ -20,17 +20,17 @@ import Alipay from '../alipay/Alipay.vue';
 })
 export default class Index extends Vue {
     private msg: string = 'Hello world';
-    private flag: boolean = false;
+    private flag: boolean = true;
 
     private changeFlag(flag: boolean): boolean {
         return !flag;
     }
 
-    private created() {
-        setTimeout(() => {
-            this.flag = this.changeFlag(this.flag);
-        }, 3200);
-    }
+    // private created() {
+    //     setTimeout(() => {
+    //         this.flag = this.changeFlag(this.flag);
+    //     }, 3200);
+    // }
 }
 </script>
 

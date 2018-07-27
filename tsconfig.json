@@ -19,6 +19,9 @@
       "@/*": [
         "src/*"
       ],
+      "vue-awesome": [
+        "location-of-types/vue-awesome/components/Icon"
+      ]
       // "ramda": [
       //   "location-of-types/npm-ramda-package/index"
       // ],
