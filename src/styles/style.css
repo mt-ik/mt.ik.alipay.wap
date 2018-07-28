@@ -1,7 +1,10 @@
+/* icon-font 图标 */
+@import './icon.css';
 /* root 变量*/
 @import './root.css';
 html, body {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
     width: var(--mk-width);
     height: var(--mk-height);
     min-width: var(--mk-width);
@@ -9,4 +12,5 @@ html, body {
     font-size: var(--mk-font-size);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }

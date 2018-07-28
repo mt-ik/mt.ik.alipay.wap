@@ -1,5 +1,6 @@
 <template>
     <div class="mk-welcome">
+        <i class="icon iconfont icon-zhifubao"></i>
         <time-tip></time-tip>
     </div>
 </template>

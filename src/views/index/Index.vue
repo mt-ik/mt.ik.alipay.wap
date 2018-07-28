@@ -26,27 +26,21 @@ export default class Index extends Vue {
         return !flag;
     }
 
-    // private created() {
-    //     setTimeout(() => {
-    //         this.flag = this.changeFlag(this.flag);
-    //     }, 3200);
-    // }
+    private created() {
+        setTimeout(() => {
+            this.flag = this.changeFlag(this.flag);
+        }, 3200);
+    }
 }
 </script>
 
 <style lang="postcss" scoped>
-    @svg square {
-        @rect {
-            fill: black;
-            width: 100%;
-            height: 100%;
-        }
-    }
     .mk-index {
         height: var(--mk-height);
         width: var(--mk-width);
-        background: svg(square);
-        background-color: #ffffff;
+        background-color: var(--mk-bg-color);
+        overflow: hidden;
+        position: relative;
     }
 </style>
 
