@@ -1,8 +1,9 @@
 <template>
     <div class="mk-index">
         <transition>
-            <Welcome v-if="!flag"></Welcome>
-            <Alipay v-else></Alipay>
+            <!-- <Welcome v-if="!flag"></Welcome> -->
+            <!-- <Alipay v-else></Alipay> -->
+            <router-view></router-view>
         </transition>
     </div>
 </template>
@@ -27,9 +28,10 @@ export default class Index extends Vue {
     }
 
     private created() {
-        setTimeout(() => {
-            this.flag = this.changeFlag(this.flag);
-        }, 3200);
+        // setTimeout(() => {
+        //     this.flag = this.changeFlag(this.flag);
+        // }, 3200);
+        this.$router.push({ path: 'login'});
     }
 }
 </script>

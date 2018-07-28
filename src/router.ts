@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Other from './views/other/other.vue';
 import Index from './views/index/Index.vue';
+import Login from './views/login/Login.vue';
+import Register from './views/login/Register.vue';
 import Advertising from './views/advertising/Advertising.vue';
 import Home from './views/home/Home.vue';
 import Wealth from './views/wealth/Wealth.vue';
@@ -20,6 +22,16 @@ const router = new Router({
       name: 'index',
       component: Index,
       children: [
+        {
+          path: '/login',
+          name: 'login',
+          component: Login,
+        },
+        {
+          path: '/register',
+          name: 'register',
+          component: Register,
+        },
         {
           path: '/home',
           name: 'home',

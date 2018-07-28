@@ -3,23 +3,33 @@
         <nav id="nav">
             <router-link to="/home">
                 <span>首页</span>
-                <span>😄</span>
+                <span>
+                    <i class="icon iconfont icon-zhifubao15 icon-font-size"></i>
+                </span>
             </router-link>
             <router-link to="/wealth">
                 <span>财富</span>
-                <span>😄</span>
+                <span>
+                    <i class="icon iconfont icon-caifu8 icon-font-size"></i>
+                </span>
             </router-link>
             <router-link to="/reputation">
                 <span>口碑</span>
-                <span>😄</span>
+                <span>
+                    <i class="icon iconfont icon-koubei icon-font-size"></i>
+                </span>
             </router-link>
             <router-link to="/friend">
                 <span>朋友</span>
-                <span>😄</span>
+                <span>
+                    <i class="icon iconfont icon-shejiao icon-font-size"></i>
+                </span>
             </router-link>
             <router-link to="/mine">
                 <span>我的</span>
-                <span>😄</span>
+                <span>
+                    <i class="icon iconfont icon-wode icon-font-size"></i>
+                </span>
             </router-link>
         </nav>
         <div class="main">
@@ -37,9 +47,9 @@ export default class Alipay extends Vue {
     // private mounted() {
     //     this.$router.push('')
     // }
-    private created() {
-        alert('我是业务主页入口哦·在这里加载业务全局依赖');
-    }
+    // private created() {
+    //     alert('我是业务主页入口哦·在这里加载业务全局依赖');
+    // }
 }
 </script>
 
@@ -61,13 +71,18 @@ export default class Alipay extends Vue {
         flex: 1;
         padding-top: 10px;
         color: var(--mk-text-color);
-        font-size: 14px;
+        font-size: 24px;
+        transform: scale(0.8333);
+        line-height: 24px;
         text-align: center;
         text-decoration: none;
         display: flex;
         flex-direction: column-reverse; 
         &.router-link-exact-active {
             color: #42b983;
+        }
+        & .icon-font-size {
+            font-size: 44px;
         }
     }
 }
