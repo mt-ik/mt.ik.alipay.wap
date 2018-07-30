@@ -1,0 +1,17 @@
+html, body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    width: var(--mk-width);
+    height: var(--mk-height);
+    min-width: var(--mk-width);
+    min-height: var(--mk-height);
+    font-size: var(--mk-font-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+a {
+    color: #fc9153;
+    text-decoration: none;
+}

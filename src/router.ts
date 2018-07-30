@@ -5,6 +5,7 @@ import Index from './views/index/Index.vue';
 import Login from './views/login/Login.vue';
 import Register from './views/login/Register.vue';
 import Advertising from './views/advertising/Advertising.vue';
+import Alipay from './views/alipay/Alipay.vue';
 import Home from './views/home/Home.vue';
 import Wealth from './views/wealth/Wealth.vue';
 import Reputation from './views//reputation/Reputation.vue';
@@ -31,6 +32,11 @@ const router = new Router({
           path: '/register',
           name: 'register',
           component: Register,
+        },
+        {
+          path: '/alipay',
+          name: 'alipay',
+          component: Alipay,
         },
         {
           path: '/home',

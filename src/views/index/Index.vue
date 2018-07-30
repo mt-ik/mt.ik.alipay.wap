@@ -27,12 +27,12 @@ export default class Index extends Vue {
         return !flag;
     }
 
-    private created() {
+    // private created() {
         // setTimeout(() => {
         //     this.flag = this.changeFlag(this.flag);
         // }, 3200);
-        this.$router.push({ path: 'login'});
-    }
+        // this.$router.push({ path: 'login'});
+    // }
 }
 </script>
 

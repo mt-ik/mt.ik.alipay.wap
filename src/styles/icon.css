@@ -1,2 +1,7 @@
 /* icon-font 图标 */
 @import '../assets//alipay/iconfont.css';
+
+.mk-icon-lg {
+    height: 72px !important;
+    width: 72px !important;
+}
