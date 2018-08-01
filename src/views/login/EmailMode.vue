@@ -40,9 +40,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Icon, Field, FieldItem, InputItem, Switch, Button, Dialog } from 'mand-mobile';
+import { Icon, Field, FieldItem, InputItem, Switch, Button, Dialog, ActionSheet } from 'mand-mobile';
 
-import { ActionSheet } from 'mand-mobile';
+Vue.component(ActionSheet.name, ActionSheet);
 
 @Component({
     components: {
@@ -52,7 +52,7 @@ import { ActionSheet } from 'mand-mobile';
         [Switch.name]: Switch,
         [Icon.name]: Icon,
         [Button.name]: Button,
-        [ActionSheet.name]: ActionSheet,
+        // [ActionSheet.name]: ActionSheet,
     },
 })
 export default class MKEmailMode extends Vue {
