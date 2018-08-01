@@ -38,6 +38,7 @@ export default class MKHeader extends Vue {
     align-items: center;
     justify-content: center;
     position: relative;
+    border-bottom: 1px solid #eaecef
 }
 .left {
     justify-content: flex-start;

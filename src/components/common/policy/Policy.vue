@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import qs from 'qs';
 import MKHeader from '../header/Header.vue';
 
 @Component({
@@ -17,10 +18,15 @@ export default class MKPolicy extends Vue {
     private back: object = {
         isBack: true,
     };
-    private title: object = {
+    private title: any = {
         isTitle: true,
         label: '政策',
         align: 'left',
     };
+
+    private created() {
+        const options = qs.parse(window.location.href.split('?')[1]);
+        this.title.label = options.title;
+    }
 }
 </script>
