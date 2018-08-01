@@ -66,7 +66,8 @@ export default class Alipay extends Vue {
     position: fixed;
     bottom: 0;
     display: flex;
-    border-top: 1px solid #888888; 
+    // border-top: 1px solid #888888; 
+    @mixin border-all-1px #ebebeb;
     & a {
         flex: 1;
         padding-top: 10px;

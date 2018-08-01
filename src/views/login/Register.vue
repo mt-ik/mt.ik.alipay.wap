@@ -1,6 +1,6 @@
 <template>
     <div class="mk-register">
-        <MKHeader :isBack="isBack" :isTitle="title"></MKHeader>
+        <MKHeader :isBack="back" :isTitle="title"></MKHeader>
         <div class="register-logo">
             <i class="icon iconfont icon-zhifubao9 size"></i>
         </div>
@@ -27,9 +27,9 @@
             </div>
             <div class="register-tip">
                 <span>注册即表示同意</span>
-                <span><a href="https://www.alipay.com">支付宝服务协议</a>、</span>
-                <span><a href="https://www.alipay.com">支付宝隐私权政策</a>、</span>
-                <span>和<a href="https://www.alipay.com">支付宝隐私权政策</a></span>
+                <span><a href="#" @click="showPolicy(1, '支付宝服务协议')">支付宝服务协议</a>、</span>
+                <span><a href="#" @click="showPolicy(2, '隐私权政策')">支付宝隐私权政策</a>、</span>
+                <span>和<a href="#" @click="showPolicy(3, '支付宝隐私权政策')">支付宝隐私权政策</a></span>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@ import MKHeader from '@/components/common/header/Header.vue';
 export default class Register extends Vue {
     private msg: string = 'register';
     private phone: string = '';
-    private isBack: object = {
+    private back: object = {
         isBack: true,
         dialog: {
             cancel: '返回',
@@ -70,6 +70,10 @@ export default class Register extends Vue {
     };
     private register(): void {
         alert('注册');
+    }
+    private showPolicy(type: number, title: string): void {
+        const params: any = { path: '/policy', query: { type, title }};
+        this.$router.push(params);
     }
 }
 </script>
