@@ -27,9 +27,9 @@
             </div>
             <div class="register-tip">
                 <span>注册即表示同意</span>
-                <span><a href="#" @click="showPolicy(1, '支付宝服务协议')">支付宝服务协议</a>、</span>
-                <span><a href="#" @click="showPolicy(2, '隐私权政策')">支付宝隐私权政策</a>、</span>
-                <span>和<a href="#" @click="showPolicy(3, '支付宝隐私权政策')">支付宝隐私权政策</a></span>
+                <span><a href="javascript:void(0);" @click="showPolicy(1, '支付宝服务协议')">支付宝服务协议</a>、</span>
+                <span><a href="javascript:void(0);" @click="showPolicy(2, '隐私权政策')">支付宝隐私权政策</a>、</span>
+                <span>和<a href="javascript:void(0);" @click="showPolicy(3, '支付宝隐私权政策')">支付宝隐私权政策</a></span>
             </div>
         </div>
     </div>
@@ -72,7 +72,8 @@ export default class Register extends Vue {
         alert('注册');
     }
     private showPolicy(type: number, title: string): void {
-        const params: any = { path: '/policy', query: { type, title }};
+        const encodeTitle = encodeURI(title);
+        const params: any = { path: '/policy', query: { type, title: encodeTitle }};
         this.$router.push(params);
     }
 }
