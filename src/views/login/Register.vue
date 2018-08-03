@@ -7,11 +7,12 @@
         <div class="register">
             <md-field>
                 <md-field-item
-                    name="phoneAttribution"
+                    name="attribution"
                     title="归属地"
                     arrow="arrow-right"
                     value="中国大陆"
-                    align="right">
+                    align="right"
+                    @click="showAttribution">
                 </md-field-item>
                 <md-input-item
                     title="+86"
@@ -32,6 +33,7 @@
                 <span>和<a href="javascript:void(0);" @click="showPolicy(3, '支付宝隐私权政策')">支付宝隐私权政策</a></span>
             </div>
         </div>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -51,7 +53,7 @@ import MKHeader from '@/components/common/header/Header.vue';
     },
 })
 export default class Register extends Vue {
-    private msg: string = 'register';
+    private path: string = '/register';
     private phone: string = '';
     private back: object = {
         isBack: true,
@@ -75,6 +77,11 @@ export default class Register extends Vue {
         const encodeTitle = encodeURI(title);
         const params: any = { path: '/policy', query: { type, title: encodeTitle }};
         this.$router.push(params);
+    }
+    private showAttribution(name: any) {
+        const path = `${this.path}/${name}`;
+        this.$router.push({ path });
+
     }
 }
 </script>

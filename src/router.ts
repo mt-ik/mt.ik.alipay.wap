@@ -4,6 +4,7 @@ import Other from './views/other/other.vue';
 import Index from './views/index/Index.vue';
 import Login from './views/login/Login.vue';
 import Register from './views/login/Register.vue';
+import Attribution from './views/login/Attribution.vue';
 import Policy from './views/policy/Policy.vue';
 import Advertising from './views/advertising/Advertising.vue';
 import Alipay from './views/alipay/Alipay.vue';
@@ -33,6 +34,13 @@ const router = new Router({
           path: '/register',
           name: 'register',
           component: Register,
+          children: [
+            {
+              path: '/attribution',
+              name: 'attribution',
+              component: Attribution,
+            },
+          ],
         },
         {
           path: '/policy',

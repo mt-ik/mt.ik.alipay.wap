@@ -45,7 +45,7 @@ export default class MKDialog extends Vue {
 
     @Emit('changeOpen')
     private changeOpenEimt(flag: boolean): boolean {
-        return flag;
+        return true;
     }
 
     private onBackCancel(): void {
